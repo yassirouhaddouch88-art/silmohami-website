@@ -2,8 +2,8 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/data/site";
 
-// The Si Lmo7ami character portrait framed as a rounded avatar. The source image
-// is a tall portrait, so `object-top` keeps the face in frame at any square size.
+// The Si Lmo7ami brand avatar (square profile illustration) framed as a rounded
+// avatar. Square source → `object-cover` shows the full composition at any size.
 export function BrandAvatar({
   size = 64,
   className,
@@ -22,12 +22,12 @@ export function BrandAvatar({
       style={{ width: size, height: size }}
     >
       <Image
-        src="/silmohami.webp"
+        src="/silmohami-avatar.webp"
         alt={SITE.logoAlt}
         fill
         sizes={`${size}px`}
         priority={priority}
-        className="object-cover object-top"
+        className="object-cover object-center"
       />
     </div>
   );

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source art (processed into public/silmohami-avatar.webp)
+/profile-pictue-silmohami/
