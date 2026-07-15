@@ -1,4 +1,4 @@
-import { FileText, ListChecks } from "lucide-react";
+import { FileText, ListChecks, Info } from "lucide-react";
 import { TopBar } from "@/components/top-bar";
 import { SectionHeading } from "@/components/section-heading";
 import { DocumentCard } from "@/components/document-card";
@@ -9,7 +9,7 @@ import { Disclaimer } from "@/components/disclaimer";
 import { guideIcons } from "@/lib/guide-icons";
 import type { Guide } from "@/data/types";
 
-const sectionIcons = { documents: FileText, steps: ListChecks } as const;
+const sectionIcons = { documents: FileText, steps: ListChecks, text: Info } as const;
 
 // Reusable layout for any guide. Renders each section by its `type`, so new
 // guides need only data — no template changes.
@@ -59,7 +59,7 @@ export function GuideTemplate({ guide }: { guide: Guide }) {
                     ))}
                   </div>
                 </>
-              ) : (
+              ) : section.type === "steps" ? (
                 <>
                   <SectionHeading
                     icon={sectionIcons.steps}
@@ -76,6 +76,15 @@ export function GuideTemplate({ guide }: { guide: Guide }) {
                       />
                     ))}
                   </ol>
+                </>
+              ) : (
+                <>
+                  {section.heading ? (
+                    <SectionHeading icon={sectionIcons.text} title={section.heading} />
+                  ) : null}
+                  <p className="text-[15px] leading-relaxed text-foreground">
+                    {section.body}
+                  </p>
                 </>
               )}
             </section>

@@ -21,6 +21,12 @@ export type Section =
       type: "steps";
       heading: string;
       items: string[];
+    }
+  | {
+      type: "text";
+      /** Optional — omit to continue the previous section without a new heading. */
+      heading?: string;
+      body: string;
     };
 
 /** A Lucide icon key (mapped to a component in the UI layer, keeps data UI-free). */

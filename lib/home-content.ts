@@ -68,7 +68,7 @@ export const HOME = {
 
   // Placeholder numbers — update weekly.
   stats: [
-    { value: "+200K", label: "متابع" },
+    { value: "+700K", label: "متابع" },
     { value: "5", label: "منصات" },
     { value: "آلاف", label: "الأسئلة جاوبنا عليها" },
   ] satisfies HomeStat[],
