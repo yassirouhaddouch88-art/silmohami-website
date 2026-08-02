@@ -45,6 +45,6 @@ export type Guide = {
   description: string;
   /** Ordered content blocks. */
   sections: Section[];
-  /** Warm, reassuring callout shown near the end (the emotional peak). */
-  highlightBox: string;
+  /** Warm, reassuring callout shown near the end (the emotional peak). Omit to skip it. */
+  highlightBox?: string;
 };

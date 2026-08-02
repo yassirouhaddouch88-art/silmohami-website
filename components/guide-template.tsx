@@ -91,9 +91,11 @@ export function GuideTemplate({ guide }: { guide: Guide }) {
           ))}
         </div>
 
-        <div className="mt-10">
-          <HighlightCallout text={guide.highlightBox} />
-        </div>
+        {guide.highlightBox ? (
+          <div className="mt-10">
+            <HighlightCallout text={guide.highlightBox} />
+          </div>
+        ) : null}
 
         <div className="mt-10">
           <BrandFooter />
