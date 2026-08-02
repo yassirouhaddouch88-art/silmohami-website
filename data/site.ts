@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "محاميك بالدارجة 🇲🇦",
   /** Short intro line for the hub. */
   intro: "دلائل قانونية مغربية بالدارجة، مبسطة ومباشرة — باش تعرف اللي ليك واللي عليك.",
-  url: "https://silmohami.com",
+  url: "https://silmo7ami.com",
 
   instagram: {
     handle: "@silmo7ami",
